@@ -95,5 +95,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
     lazyImages.forEach((img) => imageObserver.observe(img));
   }
+
+  const areaSearchForm = document.querySelector(".area-search");
+  const areaSearchInput = document.querySelector("#area-search-input");
+  const areaRows = Array.from(document.querySelectorAll("[data-area-row]"));
+  const areaStatus = document.querySelector(".area-search__status");
+  const areaEmpty = document.querySelector(".area-search__empty");
+  const areaClear = document.querySelector(".area-search__clear");
+
+  if (areaSearchForm) {
+    areaSearchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+    });
+  }
+
+  if (areaSearchInput && areaRows.length > 0) {
+    const totalCount = areaRows.length;
+
+    const updateStatus = (matches, keyword) => {
+      if (!areaStatus) return;
+      areaStatus.textContent =
+        keyword && keyword.length > 0
+          ? `${matches}件の都府県が見つかりました。`
+          : `${totalCount}件の都府県が表示されています。`;
+    };
+
+    const filterRows = () => {
+      const keyword = areaSearchInput.value.trim().toLowerCase();
+      let matchCount = 0;
+
+      areaRows.forEach((row) => {
+        const haystack = (row.dataset.search || "").toLowerCase();
+        const isMatch = keyword === "" || haystack.includes(keyword);
+        row.hidden = !isMatch;
+        if (isMatch) {
+          matchCount += 1;
+        }
+      });
+
+      updateStatus(matchCount, keyword);
+
+      if (areaEmpty) {
+        areaEmpty.hidden = keyword === "" || matchCount > 0;
+      }
+    };
+
+    areaSearchInput.addEventListener("input", filterRows);
+
+    if (areaClear) {
+      areaClear.addEventListener("click", () => {
+        areaSearchInput.value = "";
+        areaSearchInput.focus();
+        filterRows();
+      });
+    }
+
+    filterRows();
+  }
 });
 

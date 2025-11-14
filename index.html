@@ -20,578 +20,192 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/main.css" />
     <script defer src="scripts/main.js"></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">コンテンツへスキップ</a>
     <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand">
-          <span class="brand-mark" aria-hidden="true">🌀</span>
-          <span class="brand-name">クリーンプラス</span>
-          <span class="brand-tagline">洗濯機クリーニング専門店</span>
-        </div>
-        <nav class="site-nav" aria-label="メインメニュー">
-          <button
-            class="site-nav__toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="primary-menu"
+      <div class="nav-wrapper">
+        <div class="container nav-wrapper__inner">
+          <a class="site-logo" href="#hero" aria-label="トップへ戻る">
+            <img src="public/logo_robot.png" alt="クリーンプラス" />
+          </a>
+          <nav class="site-nav" aria-label="メインメニュー">
+            <button
+              class="site-nav__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-menu"
+            >
+              <span class="sr-only">メニューを開く</span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul class="site-nav__list" id="primary-menu">
+              <li><a href="#hero">トップ</a></li>
+              <li><a href="pricing.html">料金</a></li>
+              <li><a href="flow.html">ご利用の流れ</a></li>
+              <li><a href="areas.html">対応エリア</a></li>
+              <li><a href="column.html" class="link-highlight">コラム</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </nav>
+          <a
+            class="header-cta-btn btn btn--secondary"
+            href="https://line.me/R/ti/p/"
+            target="_blank"
+            rel="noopener"
+            >無料診断</a
           >
-            <span class="sr-only">メニューを開く</span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <ul class="site-nav__list" id="primary-menu">
-            <li><a href="#free-diagnosis">無料診断</a></li>
-            <li><a href="#problem">お悩み</a></li>
-            <li><a href="#transparency">透明性</a></li>
-            <li><a href="#solution">効果</a></li>
-            <li><a href="#pricing">料金</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#cta-final" class="link-highlight">予約</a></li>
-          </ul>
-        </nav>
-        <div class="header-cta">
-          <a class="btn btn--secondary" href="tel:0360000000">03-6000-0000</a>
-          <a class="btn" href="#cta-final">無料診断予約</a>
         </div>
       </div>
     </header>
+
     <main id="main">
       <section class="hero section" id="hero" data-animate="fade-up">
         <div class="container hero__inner">
           <div class="hero__content">
-            <p class="hero__label">まずは無料診断から</p>
             <h1 class="hero__title">
-              汚れを確認してから作業スタート。<br />
-              納得してからのお支払いで安心。
+              <span>まずは無料診断から。</span>
+              <span>汚れを確認してから作業スタート 納得してからのお支払い。</span>
+              <span>追加料金は一切ありません。</span>
             </h1>
-            <p class="hero__subtitle">
-              追加料金は一切なし。累計10,000件の無料診断実績で、洗濯機の裏側まで徹底チェック。
-            </p>
-            <div class="hero__price">
-              <span class="hero__price-label">料金目安</span>
-              <div class="hero__price-values">
-                <span class="price-chip">縦型 7,700円〜</span>
-                <span class="price-chip">ドラム式 14,800円〜</span>
-                <span class="price-note"
-                  >※無料診断後、正式なお見積もりを提示します</span
-                >
-              </div>
-            </div>
-            <ul class="hero__points">
-              <li>
-                <span class="icon" aria-hidden="true">🔍</span>
-                完全無料診断。分解して汚れを確認
-              </li>
-              <li>
-                <span class="icon" aria-hidden="true">📸</span>
-                写真で汚れを見える化。診断だけでもOK
-              </li>
-              <li>
-                <span class="icon" aria-hidden="true">✅</span>
-                納得してから作業開始。強引な営業は一切なし
-              </li>
-            </ul>
-            <div class="cta-group">
-              <a class="btn btn--primary" href="#cta-final"
-                >まずは無料診断を予約する</a
-              >
-              <div class="cta-sub">
-                <a class="cta-link" href="tel:0360000000">📞 今すぐ電話で相談</a>
-                <a class="cta-link" href="https://line.me/R/ti/p/" target="_blank"
-                  >📱 LINEで簡単予約</a
-                >
-                <a class="cta-link" href="mailto:info@example.com"
-                  >✉️ メールで問い合わせ</a
-                >
-              </div>
-            </div>
-            <ul class="trust-badges">
-              <li>無料診断実績 10,000件以上</li>
-              <li>診断後のご依頼率 95%</li>
-              <li>強引な営業は一切なし</li>
-              <li>年中無休・即日対応可能</li>
-            </ul>
-          </div>
-          <div class="hero__visual">
-            <div class="image-placeholder image-placeholder--hero">
-              <p>診断風景のイメージ写真</p>
-            </div>
           </div>
         </div>
       </section>
 
-      <section
-        class="section section--highlight"
-        id="free-diagnosis"
-        data-animate="fade-up"
-      >
+      <section class="section section--light trust-belt" id="trust" data-animate="fade-up">
+        <div class="container trust-belt__inner">
+          <header class="section__header">
+            <h2>あるるの強み</h2>
+          </header>
+          <div class="trust-features">
+            <article class="trust-feature card">
+              <div class="trust-feature__icon" aria-hidden="true"></div>
+              <h3>洗濯機を無料で分解後 作業メニューを決定</h3>
+              <div class="trust-feature__divider"></div>
+              <p>
+                洗濯機を無料で分解し、洗濯槽の状態をご確認いただいた後、作業メニューをお選びいただけます。
+              </p>
+            </article>
+            <article class="trust-feature card">
+              <div class="trust-feature__icon" aria-hidden="true"></div>
+              <h3>作業対応地域なら 訪問費は無料</h3>
+              <div class="trust-feature__divider"></div>
+              <p>
+                東京（離島除く）・大阪をはじめ、対応地域であれば訪問費はかかりません。作業に関わるメニュー料金のみです。
+              </p>
+            </article>
+            <article class="trust-feature card">
+              <div class="trust-feature__icon" aria-hidden="true"></div>
+              <h3>作業スタッフは すべて正規社員</h3>
+              <div class="trust-feature__divider"></div>
+              <p>
+                作業スタッフは、業務委託や契約社員ではなく、全員が安心の正規社員！終了まで責任をもって作業いたします。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reasons-flow" id="reasons" data-animate="fade-up">
+        <div class="container">
+          <header class="section__header">
+            <h2>クリーニング（掃除）の流れ</h2>
+          </header>
+          <div class="flow-steps">
+            <article class="flow-step">
+              <div class="flow-step__number">
+                <span class="flow-step__index">1</span>
+                <span class="flow-step__label">ご予約</span>
+              </div>
+              <div class="flow-step__divider"></div>
+              <div class="flow-step__image">
+                <p>予約フォーム・お電話からお申し込み</p>
+              </div>
+              <p class="flow-step__description">
+                HP上のご予約フォーム・お電話からご予約ください。ご予約日時にご訪問いたしますので、ご在宅ください。
+              </p>
+            </article>
+            <article class="flow-step">
+              <div class="flow-step__number">
+                <span class="flow-step__index">2</span>
+                <span class="flow-step__label">分解後メニュー決定</span>
+              </div>
+              <div class="flow-step__divider"></div>
+              <div class="flow-step__image">
+                <p>洗濯機の汚れを直接ご確認</p>
+              </div>
+              <p class="flow-step__description">
+                洗濯機を無料で分解し、洗濯槽の汚れを直接ご確認いただいた上で、お客様のご要望に応じてプランをお選びいただきます。
+              </p>
+            </article>
+            <article class="flow-step">
+              <div class="flow-step__number">
+                <span class="flow-step__index">3</span>
+                <span class="flow-step__label">作業開始</span>
+              </div>
+              <div class="flow-step__divider"></div>
+              <div class="flow-step__image">
+                <p>お見積もり後にクリーニング</p>
+              </div>
+              <p class="flow-step__description">
+                お見積もりの後、洗濯機のクリーニング（掃除）を開始いたします。お支払いにはクレジットカード・PayPay・現金等をご利用いただけます。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--light" id="free-diagnosis" data-animate="fade-up">
         <div class="container">
           <header class="section__header">
             <h2>安心の無料診断サービス</h2>
-            <p>
-              洗濯機を分解して汚れの状態を確認し、写真で詳しく説明します。診断だけのご利用も大歓迎です。
-            </p>
+            <p>作業前に必ず無料診断を実施。洗濯機を分解して汚れの状態を確認し、写真で詳しくご説明します。診断だけのご利用も大歓迎です。</p>
           </header>
-          <div class="steps-grid">
+          <div class="grid grid--three">
             <article class="card step-card">
-              <div class="step-card__label">STEP 1</div>
+              <div class="step-card__number">STEP 1</div>
               <h3>ご訪問・ヒアリング（約5分）</h3>
-              <p>
-                洗濯機の使用年数や気になる症状を丁寧にヒアリング。「臭いがする」「黒いゴミが出る」など、お悩みを詳しく伺います。
-              </p>
-              <p class="card__point">お客様の声をもとに最適な診断を実施。</p>
+              <p>洗濯機の使用年数や気になる症状を丁寧にヒアリング。「臭いがする」「黒いゴミが出る」など、お悩みを詳しく伺います。</p>
+              <p class="card__note">ポイント：お客様の気になることを丁寧にヒアリング</p>
             </article>
             <article class="card step-card">
-              <div class="step-card__label">STEP 2</div>
+              <div class="step-card__number">STEP 2</div>
               <h3>分解・汚れチェック（約15分）</h3>
-              <p>
-                洗濯槽、フィルター、ゴムパッキンを取り外し、裏側の汚れを徹底チェック。複数箇所を撮影し、状態を記録します。
-              </p>
-              <p class="card__point">撮影した写真が判断材料になります。</p>
+              <p>洗濯槽、フィルター、ゴムパッキンを取り外し、裏側の汚れを徹底確認。複数箇所を撮影し、状態を詳しく記録します。</p>
+              <p class="card__note">ポイント：「この写真がお客様の判断材料になります」</p>
             </article>
             <article class="card step-card">
-              <div class="step-card__label">STEP 3</div>
+              <div class="step-card__number">STEP 3</div>
               <h3>診断結果のご説明（約10分）</h3>
-              <p>
-                タブレットで写真を見ながら、汚れの程度を3段階で評価。正式なお見積もりと作業内容をご説明します。
-              </p>
-              <p class="card__point">
-                その場でご判断いただいても、後日改めてでも構いません。
-              </p>
+              <p>タブレットで撮影した写真をお見せしながら、汚れの程度を3段階で評価。作業内容・所要時間・料金を丁寧にご説明します。</p>
+              <p class="card__note">ポイント：押し売りは一切なし。お客様のペースで判断していただけます</p>
             </article>
           </div>
-          <div class="option-table">
-            <h3>診断後の選択肢（すべて自由）</h3>
-            <div class="table-responsive">
-              <table>
-                <thead>
-                  <tr>
-                    <th scope="col">選択肢</th>
-                    <th scope="col">割合</th>
-                    <th scope="col">説明</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>その場で作業依頼</td>
-                    <td>約60%</td>
-                    <td>診断結果を見てすぐに依頼される方</td>
-                  </tr>
-                  <tr>
-                    <td>後日改めて依頼</td>
-                    <td>約35%</td>
-                    <td>一度検討し、ご家族と相談のうえご連絡</td>
-                  </tr>
-                  <tr>
-                    <td>今回は見送る</td>
-                    <td>約5%</td>
-                    <td>診断のみで終了（もちろん無料）</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="promise-list">
-            <div class="card card--alert">
-              <h3>❌ これらは一切ありません</h3>
-              <ul>
-                <li>診断料の請求</li>
-                <li>診断後の強引な営業</li>
-                <li>断った際の出張費請求</li>
-                <li>「今日中に決めて」などの圧力</li>
-              </ul>
-            </div>
-            <div class="card card--positive">
-              <h3>⭕ これらは保証します</h3>
-              <ul>
-                <li>診断は完全無料</li>
-                <li>診断だけでも大歓迎</li>
-                <li>後日の再検討もOK</li>
-                <li>じっくり考える時間をご提供</li>
-              </ul>
-            </div>
-          </div>
-          <div class="testimonial-grid">
+
+          <div class="testimonial-grid" data-animate="fade-up">
             <blockquote class="testimonial">
-              <p>
-                「まさかここまで汚れているとは…。写真で見せてもらって納得できました」
-              </p>
-              <cite>40代女性・東京都 ／ ⭐⭐⭐⭐⭐</cite>
+              <p>「まさかここまで汚れているとは…写真で見せてもらって納得できました」</p>
+              <cite>40代女性・東京都　★★★★★</cite>
             </blockquote>
             <blockquote class="testimonial">
-              <p>
-                「無理に勧められることもなく、じっくり考えられて良かったです」
-              </p>
-              <cite>30代男性・神奈川県 ／ ⭐⭐⭐⭐⭐</cite>
+              <p>「無理に勧められることもなく、じっくり考えられて良かったです」</p>
+              <cite>30代男性・神奈川県　★★★★★</cite>
             </blockquote>
             <blockquote class="testimonial">
-              <p>
-                「診断だけのつもりでしたが、あまりの汚れにすぐお願いしました（笑）」
-              </p>
-              <cite>50代女性・埼玉県 ／ ⭐⭐⭐⭐⭐</cite>
+              <p>「診断だけのつもりでしたが、あまりの汚れにすぐお願いしました」</p>
+              <cite>50代女性・埼玉県　★★★★★</cite>
             </blockquote>
           </div>
-          <div class="section-cta">
-            <a class="btn btn--primary" href="#cta-final"
-              >まずは無料診断を予約する</a
-            >
+
+          <div class="section-cta" data-animate="fade-up">
+            <a class="btn btn--primary" href="#cta-final">まずは無料診断を予約する</a>
             <p class="cta-note">診断だけでもOK・強引な営業なし</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="problem" data-animate="fade-up">
-        <div class="container">
-          <header class="section__header">
-            <h2>あなたの洗濯機、実は危険な状態かも</h2>
-            <p>見えないところでこんなことが起きています。</p>
-          </header>
-          <div class="media-layout">
-            <div class="media-layout__visual">
-              <div class="image-placeholder">
-                <p>洗濯槽のカビ増殖アニメーション</p>
-              </div>
-              <ul class="highlight-list">
-                <li>3年以上使用の洗濯機の90%以上が重度の汚れ</li>
-                <li>洗濯槽裏には数十万個のカビ・細菌が付着</li>
-                <li>市販クリーナーでは表面しか落とせません</li>
-              </ul>
-            </div>
-            <div class="media-layout__content">
-              <h3>1つでも当てはまれば無料診断をおすすめします</h3>
-              <ul class="checklist">
-                <li>購入後、一度もクリーニングをしていない</li>
-                <li>3年以上使用している</li>
-                <li>洗濯物から生乾き臭がする</li>
-                <li>黒いカビやゴミが付着する</li>
-                <li>洗濯槽の裏側を見たことがない</li>
-                <li>赤ちゃん・お年寄りと同居している</li>
-                <li>アレルギー体質の家族がいる</li>
-                <li>洗濯物がすぐ臭くなる</li>
-              </ul>
-              <div class="case-grid">
-                <article class="card case-card">
-                  <h4>事例1: 使用5年 一度も清掃なし</h4>
-                  <p class="case-card__badge">重度</p>
-                  <p>
-                    洗濯槽裏が真っ黒に。<br />「毎日これで洗濯していたなんて…」
-                  </p>
-                </article>
-                <article class="card case-card">
-                  <h4>事例2: 臭わないのに汚れが蓄積</h4>
-                  <p class="case-card__badge">中度</p>
-                  <p>
-                    一見きれいでも裏側はカビだらけ。<br />「臭わないから安心と思っていました」
-                  </p>
-                </article>
-                <article class="card case-card">
-                  <h4>事例3: 市販クリーナー使用でも残る汚れ</h4>
-                  <p class="case-card__badge">軽度〜中度</p>
-                  <p>
-                    表面はきれいでも裏側に汚れが残存。<br />「定期的に掃除していたのに…」
-                  </p>
-                </article>
-              </div>
-            </div>
-          </div>
-          <div class="section-cta">
-            <a class="btn btn--secondary" href="#cta-final"
-              >無料診断で状態を確認</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="section section--light"
-        id="transparency"
-        data-animate="fade-up"
-      >
-        <div class="container">
-          <header class="section__header">
-            <h2>作業前も作業中も、すべてオープンに</h2>
-            <p>当社の透明性へのこだわりをご紹介します。</p>
-          </header>
-          <div class="promise-grid">
-            <article class="card promise-card">
-              <h3>① 診断結果を写真で完全公開</h3>
-              <ul>
-                <li>分解後の汚れを複数枚撮影し、その場で共有</li>
-                <li>拡大表示で細部まで確認いただけます</li>
-                <li>ご希望があれば写真データをお渡しします</li>
-              </ul>
-              <p class="card__point">見えないところまで、すべてお見せします。</p>
-            </article>
-            <article class="card promise-card">
-              <h3>② 作業内容を事前に詳しく説明</h3>
-              <ul>
-                <li>使用する洗剤の安全性</li>
-                <li>作業工程と所要時間</li>
-                <li>どこまで分解するか、仕上がりの目安</li>
-              </ul>
-              <p class="card__point">疑問はその場で全て解消します。</p>
-            </article>
-            <article class="card promise-card">
-              <h3>③ 見積もり金額から1円も変わらない</h3>
-              <ul>
-                <li>診断時の見積もりが最終金額</li>
-                <li>追加料金は一切なし</li>
-                <li>予想外の汚れが見つかっても追加請求なし</li>
-              </ul>
-              <p class="card__point">作業後の高額請求は絶対にありません。</p>
-            </article>
-            <article class="card promise-card">
-              <h3>④ 作業途中経過も随時報告</h3>
-              <ul>
-                <li>重要な工程ごとに写真で進捗を共有</li>
-                <li>予想外の汚れが見つかった場合も事前報告</li>
-                <li>お客様のスマホへ逐次連絡が可能</li>
-              </ul>
-              <p class="card__point">安心してお任せいただけます。</p>
-            </article>
-          </div>
-          <div class="flow-diagram">
-            <h3>透明性を支えるサービスフロー</h3>
-            <div class="flow-diagram__grid">
-              <div class="flow-diagram__column">
-                <h4>お客様</h4>
-                <ol>
-                  <li>お問い合わせ</li>
-                  <li>訪問予約</li>
-                  <li>無料診断</li>
-                  <li>写真確認</li>
-                  <li>見積もり提示</li>
-                  <li>ご検討</li>
-                  <li>作業依頼</li>
-                  <li>作業開始</li>
-                  <li>途中確認</li>
-                  <li>仕上がり確認</li>
-                  <li>お支払い</li>
-                </ol>
-              </div>
-              <div class="flow-diagram__column">
-                <h4>当社スタッフ</h4>
-                <ol>
-                  <li>即時対応・受付</li>
-                  <li>ご都合に合わせて日程調整</li>
-                  <li>分解・撮影・状態確認</li>
-                  <li>汚れの状態を詳しく共有</li>
-                  <li>正確な料金をご提示</li>
-                  <li>じっくり考えていただく時間を確保</li>
-                  <li>納得いただいてから作業開始</li>
-                  <li>工程ごとに丁寧に報告</li>
-                  <li>写真で進捗共有</li>
-                  <li>ビフォー・アフターを比較</li>
-                  <li>ご満足いただいてからお会計</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-          <div class="card report-card">
-            <h3>診断レポートに含まれる内容</h3>
-            <ul>
-              <li>汚れ状態の写真（5〜10枚）</li>
-              <li>汚れレベル判定（軽度・中度・重度）</li>
-              <li>推奨作業内容と作業時間の目安</li>
-              <li>正確な見積もり金額</li>
-              <li>今後のメンテナンスアドバイス</li>
-            </ul>
-          </div>
-          <blockquote class="testimonial testimonial--single">
-            <p>
-              「他社では『やってみないとわからない』と言われましたが、こちらは事前に正確な料金を提示してくれて安心でした。」
-            </p>
-            <cite>30代女性・千葉県</cite>
-          </blockquote>
-        </div>
-      </section>
-
-      <section class="section" id="solution" data-animate="fade-up">
-        <div class="container">
-          <header class="section__header">
-            <h2>プロの洗濯機クリーニングで驚きの変化</h2>
-            <p>10,000件以上の実績が証明する確かな技術。</p>
-          </header>
-          <div class="before-after-grid">
-            <article class="card before-after-card">
-              <h3>事例1: 縦型洗濯機（使用5年）</h3>
-              <div class="before-after" data-slider>
-                <div class="before-after__image before">
-                  <div class="image-placeholder">
-                    <p>Before: 黒カビびっしり</p>
-                  </div>
-                </div>
-                <div class="before-after__image after">
-                  <div class="image-placeholder">
-                    <p>After: 新品同様</p>
-                  </div>
-                </div>
-                <div class="before-after__divider" aria-hidden="true"></div>
-                <input
-                  type="range"
-                  min="0"
-                  max="100"
-                  value="50"
-                  class="before-after__slider"
-                  aria-label="スライダーで比較"
-                />
-              </div>
-              <p class="card__point">臭いが完全に消えたと喜びの声。</p>
-            </article>
-            <article class="card before-after-card">
-              <h3>事例2: ドラム式洗濯機（使用3年）</h3>
-              <div class="before-after" data-slider>
-                <div class="before-after__image before">
-                  <div class="image-placeholder">
-                    <p>Before: ゴムパッキンにカビ</p>
-                  </div>
-                </div>
-                <div class="before-after__image after">
-                  <div class="image-placeholder">
-                    <p>After: すみずみまで清潔</p>
-                  </div>
-                </div>
-                <div class="before-after__divider" aria-hidden="true"></div>
-                <input
-                  type="range"
-                  min="0"
-                  max="100"
-                  value="50"
-                  class="before-after__slider"
-                  aria-label="スライダーで比較"
-                />
-              </div>
-              <p class="card__point">ドラム式でもしっかり洗浄。</p>
-            </article>
-            <article class="card before-after-card">
-              <h3>事例3: 縦型洗濯機（使用10年）</h3>
-              <div class="before-after" data-slider>
-                <div class="before-after__image before">
-                  <div class="image-placeholder">
-                    <p>Before: 長年の汚れ</p>
-                  </div>
-                </div>
-                <div class="before-after__image after">
-                  <div class="image-placeholder">
-                    <p>After: 10年分の汚れをリセット</p>
-                  </div>
-                </div>
-                <div class="before-after__divider" aria-hidden="true"></div>
-                <input
-                  type="range"
-                  min="0"
-                  max="100"
-                  value="50"
-                  class="before-after__slider"
-                  aria-label="スライダーで比較"
-                />
-              </div>
-              <p class="card__point">驚きと感動のお声を多数いただいています。</p>
-            </article>
-          </div>
-          <div class="metrics-grid">
-            <div class="metric-card">
-              <span class="metric-card__icon" aria-hidden="true">🧪</span>
-              <p class="metric-card__value">除菌率 99.9%以上</p>
-              <p class="metric-card__desc">
-                衛生検査機関による検証済み。悪臭の原因菌を徹底除去。
-              </p>
-            </div>
-            <div class="metric-card">
-              <span class="metric-card__icon" aria-hidden="true">💧</span>
-              <p class="metric-card__value">洗浄力 最大30%向上</p>
-              <p class="metric-card__desc">
-                洗剤の効果を最大化。衣類の汚れ落ちも改善します。
-              </p>
-            </div>
-            <div class="metric-card">
-              <span class="metric-card__icon" aria-hidden="true">👃</span>
-              <p class="metric-card__value">生乾き臭を根本から除去</p>
-              <p class="metric-card__desc">
-                洗濯物の臭い戻りを防ぎ、清潔な香りが持続します。
-              </p>
-            </div>
-          </div>
-          <div class="steps-flex">
-            <article class="card process-card">
-              <h3>STEP 1: 事前点検・養生（10分）</h3>
-              <p>
-                洗濯機の型番・状態を確認し、周辺の床や壁を養生。お住まいを汚さないよう徹底します。
-              </p>
-            </article>
-            <article class="card process-card">
-              <h3>STEP 2: 分解・汚れ確認（15分）</h3>
-              <p>
-                洗濯槽やフィルターを取り外し、汚れの状態を写真でご報告。見えない部分も丁寧に確認します。
-              </p>
-            </article>
-            <article class="card process-card">
-              <h3>STEP 3: 専用洗剤による本格洗浄（60分）</h3>
-              <p>
-                業務用高濃度洗剤で洗濯槽裏側まで徹底洗浄。市販品では落とせない頑固な汚れも除去します。
-              </p>
-            </article>
-            <article class="card process-card">
-              <h3>STEP 4: 高圧すすぎ・仕上げ（20分）</h3>
-              <p>
-                高圧洗浄で汚れを洗い流し、パーツを丁寧に拭き上げ。水回りの清掃も行います。
-              </p>
-            </article>
-            <article class="card process-card">
-              <h3>STEP 5: ビフォー・アフター確認（10分）</h3>
-              <p>
-                仕上がりを写真で比較しながらご説明。お客様の納得を最優先にしています。
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--highlight" id="reasons" data-animate="fade-up">
-        <div class="container">
-          <header class="section__header">
-            <h2>選ばれる理由</h2>
-            <p>多くのお客様から支持される5つの強みをご紹介します。</p>
-          </header>
-          <div class="reasons-grid">
-            <article class="card reason-card">
-              <h3>① 無料診断と写真による見える化</h3>
-              <p>
-                汚れの状態を写真で丁寧に共有し、ご納得いただいてから作業に移ります。
-              </p>
-            </article>
-            <article class="card reason-card">
-              <h3>② 透明で明朗な料金体系</h3>
-              <p>
-                見積もりから追加料金なし。サービス内容と料金を事前に詳しくご説明します。
-              </p>
-            </article>
-            <article class="card reason-card">
-              <h3>③ 年中無休・即日対応可能</h3>
-              <p>
-                突然のトラブルにも迅速に対応。最短で当日の訪問・診断が可能です。
-              </p>
-            </article>
-            <article class="card reason-card">
-              <h3>④ 専門資格を持つ技術者が対応</h3>
-              <p>
-                独自研修と資格認定をクリアしたスタッフが、安心・安全に作業します。
-              </p>
-            </article>
-            <article class="card reason-card">
-              <h3>⑤ アフターサポートも充実</h3>
-              <p>
-                クリーニング後1ヶ月の無料点検つき。メンテナンス方法も丁寧にご案内します。
-              </p>
-            </article>
           </div>
         </div>
       </section>
@@ -599,346 +213,105 @@
       <section class="section" id="pricing" data-animate="fade-up">
         <div class="container">
           <header class="section__header">
-            <h2>透明な料金プラン</h2>
-            <p>
-              無料診断後に正式なお見積もりを提示します。見積もり金額から一切変わりません。
-            </p>
+            <h2>料金プラン</h2>
+            <p>無料診断後に正式なお見積もりをお渡しします。提示金額から一切変わりません。</p>
           </header>
+
           <div class="pricing-grid">
-            <article class="card pricing-card">
-              <h3>縦型洗濯機プラン</h3>
-              <p class="pricing-card__price">
-                <span>7,700円〜</span>
-              </p>
-              <ul>
-                <li>所要時間：約90分</li>
-                <li>洗濯槽・パルセーター・フィルター洗浄</li>
-                <li>外部パネル＆ホースの清掃</li>
-                <li>ビフォー・アフター撮影付き</li>
-              </ul>
-              <p class="pricing-card__note">※使用年数・汚れ度合いにより変動</p>
+            <article class="pricing-column">
+              <h3>縦型洗濯機</h3>
+              <div class="pricing-tier">
+                <div class="pricing-tier__header">
+                  <span class="pricing-tier__name">スタンダード</span>
+                  <span class="pricing-tier__price">7,700円〜</span>
+                </div>
+                <ul class="pricing-features">
+                  <li>所要時間：約90〜120分</li>
+                  <li>洗濯槽・パルセーター・フィルター洗浄</li>
+                  <li>外装・ホースの清掃</li>
+                  <li>写真付きレポート込み</li>
+                </ul>
+              </div>
             </article>
-            <article class="card pricing-card">
-              <h3>ドラム式洗濯機プラン</h3>
-              <p class="pricing-card__price">
-                <span>14,800円〜</span>
-              </p>
-              <ul>
-                <li>所要時間：約150分</li>
-                <li>ドラム内部・フィルター・パッキン洗浄</li>
-                <li>乾燥フィルターの分解洗浄</li>
-                <li>ビフォー・アフター撮影付き</li>
-              </ul>
-              <p class="pricing-card__note">※機種や構造により所要時間が変動</p>
+            <article class="pricing-column">
+              <h3>ドラム式洗濯機</h3>
+              <div class="pricing-tier">
+                <div class="pricing-tier__header">
+                  <span class="pricing-tier__name">スタンダード</span>
+                  <span class="pricing-tier__price">14,800円〜</span>
+                </div>
+                <ul class="pricing-features">
+                  <li>所要時間：約150〜180分</li>
+                  <li>乾燥フィルター・ゴムパッキン洗浄</li>
+                  <li>ヒートポンプ清掃（機種により）</li>
+                  <li>写真付きレポート込み</li>
+                </ul>
+              </div>
             </article>
-            <article class="card pricing-card">
+          </div>
+
+          <div class="pricing-addons">
+            <article class="pricing-addons__group">
               <h3>オプション</h3>
-              <ul>
+              <ul class="pricing-list">
                 <li>乾燥機能メンテナンス：3,300円</li>
                 <li>洗濯パン洗浄：2,200円</li>
                 <li>防カビコーティング：3,300円</li>
               </ul>
-              <p class="pricing-card__note">
-                すべて無料診断時にご説明。必要なものだけお選びください。
-              </p>
+            </article>
+            <article class="pricing-addons__group">
+              <h3>料金について</h3>
+              <ul class="pricing-list">
+                <li>表示価格は税込です。</li>
+                <li>無料診断後に正式なお見積もりを提示し、金額が変わることはありません。</li>
+                <li>分解が困難な機種の場合は追加時間をいただく場合がありますが、追加料金は発生しません。</li>
+              </ul>
             </article>
           </div>
-          <div class="pricing-cta section-cta">
-            <a class="btn btn--primary" href="#cta-final">無料診断で見積もり提示</a>
-            <p class="cta-note">追加料金は一切ありません。</p>
-          </div>
+
         </div>
       </section>
 
-      <section class="section section--light" id="process" data-animate="fade-up">
-        <div class="container">
-          <header class="section__header">
-            <h2>ご利用の流れ</h2>
-            <p>初めての方でも安心の簡単ステップ。</p>
-          </header>
-          <ol class="timeline">
-            <li>
-              <div class="timeline__step">
-                <span class="timeline__number">1</span>
-                <div>
-                  <h3>お問い合わせ</h3>
-                  <p>電話・LINE・メールから24時間受付。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="timeline__step">
-                <span class="timeline__number">2</span>
-                <div>
-                  <h3>訪問日の調整</h3>
-                  <p>ご希望の日時をヒアリングし、最短で即日訪問。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="timeline__step">
-                <span class="timeline__number">3</span>
-                <div>
-                  <h3>無料診断</h3>
-                  <p>分解・撮影で汚れをチェック。診断だけでもOK。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="timeline__step">
-                <span class="timeline__number">4</span>
-                <div>
-                  <h3>お見積もり提示</h3>
-                  <p>料金・作業内容を丁寧にご説明します。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="timeline__step">
-                <span class="timeline__number">5</span>
-                <div>
-                  <h3>ご検討</h3>
-                  <p>ご家族と相談いただいても結構です。押し売りなし。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="timeline__step">
-                <span class="timeline__number">6</span>
-                <div>
-                  <h3>作業実施</h3>
-                  <p>ご納得いただいてから作業開始。途中経過も共有。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="timeline__step">
-                <span class="timeline__number">7</span>
-                <div>
-                  <h3>仕上がり確認・お支払い</h3>
-                  <p>ビフォー・アフターを比較し、満足いただいてからお会計。</p>
-                </div>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section" id="reviews" data-animate="fade-up">
-        <div class="container">
+      <section class="section section--light reviews" id="reviews" data-animate="fade-up">
+        <div class="container reviews__inner">
           <header class="section__header">
             <h2>お客様の声</h2>
-            <p>累計レビュー数 850件以上、平均評価 4.9 / 5.0。</p>
+            <p>無料診断からご依頼までご利用いただいたお客様のお声を紹介します。多くの方がプロクリーニングの効果を実感されています。</p>
           </header>
-          <div class="reviews-grid">
-            <article class="card review-card">
-              <header>
-                <p class="review-card__rating" aria-label="5.0の評価">
-                  ⭐⭐⭐⭐⭐ 5.0
-                </p>
-                <p class="review-card__meta">40代女性・東京都・縦型洗濯機</p>
-              </header>
-              <p>
-                無料診断で見せてもらった写真に驚きました。作業前後の違いが一目瞭然で、安心してお願いできました。
-              </p>
-            </article>
-            <article class="card review-card">
-              <header>
-                <p class="review-card__rating" aria-label="4.8の評価">
-                  ⭐⭐⭐⭐⭐ 4.8
-                </p>
-                <p class="review-card__meta">30代男性・神奈川県・ドラム式</p>
-              </header>
-              <p>
-                LINEで簡単に予約でき、当日のスタッフさんもとても丁寧。料金も事前の案内通りで安心でした。
-              </p>
-            </article>
-            <article class="card review-card">
-              <header>
-                <p class="review-card__rating" aria-label="5.0の評価">
-                  ⭐⭐⭐⭐⭐ 5.0
-                </p>
-                <p class="review-card__meta">50代女性・埼玉県・縦型</p>
-              </header>
-              <p>
-                作業の途中経過も写真付きで報告してくれて、信頼できました。仕上がりも大満足です。
-              </p>
-            </article>
-            <article class="card review-card">
-              <header>
-                <p class="review-card__rating" aria-label="4.9の評価">
-                  ⭐⭐⭐⭐⭐ 4.9
-                </p>
-                <p class="review-card__meta">60代男性・千葉県・縦型</p>
-              </header>
-              <p>
-                断っても大丈夫と言われ安心しました。結果的にはお願いして本当に良かったです。
-              </p>
-            </article>
+          <div class="testimonial-grid">
+            <blockquote class="testimonial">
+              <p>「まさかここまで汚れているとは…写真で見せてもらって納得できました」</p>
+              <cite>40代女性・東京都　★★★★★</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+              <p>「無理に勧められることもなく、じっくり考えられて良かったです」</p>
+              <cite>30代男性・神奈川県　★★★★★</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+              <p>「診断だけのつもりでしたが、あまりの汚れにすぐお願いしました」</p>
+              <cite>50代女性・埼玉県　★★★★★</cite>
+            </blockquote>
           </div>
-          <div class="achievement-bar">
-            <ul>
-              <li><span>無料診断実績</span><strong>10,000件以上</strong></li>
-              <li><span>リピート率</span><strong>82%</strong></li>
-              <li><span>紹介経由</span><strong>45%</strong></li>
-            </ul>
-          </div>
-        </div>
-      </section>
 
-      <section class="section section--light" id="faq" data-animate="fade-up">
-        <div class="container">
-          <header class="section__header">
-            <h2>よくある質問</h2>
-            <p>安心してご利用いただくためのQ&amp;Aをご用意しました。</p>
-          </header>
-          <div class="faq-list">
-            <details>
-              <summary>本当に無料ですか？その後に費用は発生しませんか？</summary>
-              <p>
-                はい、無料診断は完全無料です。診断後、お見積もりにご納得いただいた場合のみ作業料金が発生します。
-              </p>
-            </details>
-            <details>
-              <summary>所要時間はどれくらいですか？</summary>
-              <p>
-                診断は約30分、作業は洗濯機の種類や汚れ具合により90〜150分を目安としてください。
-              </p>
-            </details>
-            <details>
-              <summary>断っても出張費はかかりませんか？</summary>
-              <p>
-                かかりません。診断だけで終了しても費用は一切発生しませんのでご安心ください。
-              </p>
-            </details>
-            <details>
-              <summary>当日は何を準備すればよいですか？</summary>
-              <p>
-                洗濯機周辺のスペース確保と、水道・電源の利用ができる状態であれば問題ありません。
-              </p>
-            </details>
-            <details>
-              <summary>保証やアフターケアはありますか？</summary>
-              <p>
-                作業後1ヶ月以内に気になる点があれば無料で再点検いたします。メンテナンス方法もご案内します。
-              </p>
-            </details>
-            <details>
-              <summary>追加料金が発生するケースはありますか？</summary>
-              <p>
-                追加料金は一切ありません。予想外の汚れが見つかった場合も、事前見積もりの範囲で対応します。
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="areas" data-animate="fade-up">
-        <div class="container">
-          <header class="section__header">
-            <h2>対応エリアと実績</h2>
-            <p>関東エリアを中心に幅広く対応しています。</p>
-          </header>
-          <div class="areas-grid">
-            <div class="card area-card">
-              <h3>対応エリア</h3>
-              <ul>
-                <li>東京都全域（離島除く）</li>
-                <li>神奈川県（川崎・横浜・相模原 ほか）</li>
-                <li>埼玉県（さいたま・川口・所沢 ほか）</li>
-                <li>千葉県（船橋・市川・柏 ほか）</li>
-              </ul>
-              <p class="card__note">※その他エリアはご相談ください。</p>
-            </div>
-            <div class="card area-card">
-              <h3>年間実績</h3>
-              <ul>
-                <li>年間クリーニング件数：3,200件</li>
-                <li>法人・施設の定期契約：28社</li>
-                <li>紹介経由のご依頼：45%</li>
-                <li>リピート率：82%</li>
-              </ul>
-            </div>
-            <div class="card area-card">
-              <h3>対応可能なメーカー</h3>
-              <ul class="badge-list">
-                <li>Panasonic</li>
-                <li>TOSHIBA</li>
-                <li>SHARP</li>
-                <li>HITACHI</li>
-                <li>Hisense</li>
-                <li>AEG</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--light" id="team" data-animate="fade-up">
-        <div class="container">
-          <header class="section__header">
-            <h2>スタッフ紹介</h2>
-            <p>専門資格を持つスタッフが対応します。</p>
-          </header>
-          <div class="team-grid">
-            <article class="card team-card">
-              <div class="team-card__photo image-placeholder">
-                <p>スタッフA</p>
-              </div>
-              <h3>山田 太郎</h3>
-              <p class="team-card__role">技術責任者／クリーニング歴12年</p>
-              <p>
-                分解洗浄のスペシャリスト。どんな汚れも見逃しません。安心してお任せください。
-              </p>
-            </article>
-            <article class="card team-card">
-              <div class="team-card__photo image-placeholder">
-                <p>スタッフB</p>
-              </div>
-              <h3>佐藤 花子</h3>
-              <p class="team-card__role">接客担当／クリーニング歴8年</p>
-              <p>
-                丁寧なヒアリングとわかりやすい説明が得意。お客様に寄り添った対応を心がけています。
-              </p>
-            </article>
-            <article class="card team-card">
-              <div class="team-card__photo image-placeholder">
-                <p>スタッフC</p>
-              </div>
-              <h3>田中 健</h3>
-              <p class="team-card__role">アフターケア担当／クリーニング歴6年</p>
-              <p>
-                施工後のフォローやメンテナンスアドバイスを担当。快適な暮らしをサポートします。
-              </p>
-            </article>
+          <div class="section-cta" data-animate="fade-up">
+            <a class="btn btn--primary" href="#cta-final">まずは無料診断を予約する</a>
+            <p class="cta-note">診断だけでもOK・強引な営業なし</p>
           </div>
         </div>
       </section>
 
       <section class="section cta-final" id="cta-final" data-animate="fade-up">
         <div class="container cta-final__inner">
-          <div class="cta-final__content">
-            <h2>無料診断で洗濯機の状態を見える化</h2>
-            <p>
-              追加料金ゼロ・強引な営業なし。まずは状態を知るところから始めましょう。
-            </p>
-            <ul class="cta-final__badges">
-              <li>最短即日訪問</li>
-              <li>写真付きレポート</li>
-              <li>診断だけでもOK</li>
-            </ul>
-          </div>
-          <div class="cta-final__actions">
-            <a class="btn btn--primary btn--large" href="https://line.me/R/ti/p/" target="_blank" rel="noopener">
-              LINEで無料診断を予約
-            </a>
-            <a class="btn btn--secondary btn--large" href="tel:0360000000">
-              03-6000-0000（9:00〜20:00）
-            </a>
-            <a class="btn btn--ghost btn--large" href="mailto:info@example.com">
-              メールで問い合わせる
-            </a>
-            <p class="cta-note">※診断のみのご利用も歓迎しています。</p>
+          <h2>お申し込みはこちらから</h2>
+          <p>
+            お申し込みは、お電話またはHP上のご予約フォームからお申し込みください。
+            お申し込み後、ご担当者よりご連絡させていただきます。
+          </p>
+          <div class="cta-final__buttons">
+            <a class="btn btn--primary" href="tel:0000000000">お電話でのお申し込み</a>
+            <a class="btn btn--secondary" href="https://line.me/R/ti/p/" target="_blank" rel="noopener"
+              >LINEでのお申し込み</a
+            >
           </div>
         </div>
       </section>
@@ -947,37 +320,34 @@
     <footer class="site-footer" id="footer">
       <div class="container footer__inner">
         <div class="footer__brand">
-          <h2>クリーンプラス</h2>
-          <p>
-            洗濯機クリーニング専門店として、透明性と誠実さを大切にしています。
-          </p>
+          <a class="footer__logo" href="#hero" aria-label="トップへ戻る">
+            <img src="public/logo_robot.png" alt="クリーンプラス" />
+          </a>
           <ul class="footer__contacts">
-            <li><a href="tel:0360000000">03-6000-0000</a></li>
+            <li><a href="tel:0000000000">電話予約：XXX-XXXX-XXXX</a></li>
             <li><a href="mailto:info@example.com">info@example.com</a></li>
             <li>東京都渋谷区○○1-2-3 クリーンプラスビル4F</li>
           </ul>
         </div>
-        <div class="footer__links">
+        <div class="footer__nav">
           <h3>メニュー</h3>
           <ul>
-            <li><a href="#hero">トップ</a></li>
-            <li><a href="#free-diagnosis">無料診断</a></li>
-            <li><a href="#pricing">料金</a></li>
+            <li>
+              <a class="footer__btn" href="https://line.me/R/ti/p/" target="_blank" rel="noopener"
+                >無料診断（LINE予約はこちら）</a
+              >
+            </li>
+            <li><a href="pricing.html">料金</a></li>
+            <li><a href="flow.html">ご利用の流れ</a></li>
+            <li><a href="areas.html">対応エリア</a></li>
+            <li><a href="column.html">コラム</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
-        <div class="footer__hours">
+        <div class="footer__info">
           <h3>営業時間</h3>
           <p>年中無休 9:00〜20:00</p>
           <p>LINEは24時間受付</p>
-        </div>
-        <div class="footer__legal">
-          <h3>公式アカウント</h3>
-          <ul>
-            <li><a href="https://line.me/R/ti/p/" target="_blank">LINE公式</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">YouTube</a></li>
-          </ul>
         </div>
       </div>
       <div class="footer__bottom">
@@ -1022,12 +392,7 @@
             "closes": "20:00"
           }
         ],
-        "areaServed": [
-          "東京",
-          "神奈川",
-          "埼玉",
-          "千葉"
-        ],
+        "areaServed": ["東京", "神奈川", "埼玉", "千葉"],
         "url": "https://example.com/",
         "sameAs": [
           "https://line.me/R/ti/p/",

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>対応エリア | クリーンプラス 洗濯機クリーニング</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="nav-wrapper">
+        <div class="container nav-wrapper__inner">
+          <a class="site-logo" href="index.html#hero" aria-label="トップへ戻る">
+            <img src="public/logo_robot.png" alt="クリーンプラス" />
+          </a>
+          <nav class="site-nav" aria-label="メインメニュー">
+            <button
+              class="site-nav__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-menu"
+            >
+              <span class="sr-only">メニューを開く</span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul class="site-nav__list" id="primary-menu">
+              <li><a href="index.html#hero">トップ</a></li>
+              <li><a href="pricing.html">料金</a></li>
+              <li><a href="flow.html">ご利用の流れ</a></li>
+              <li><a href="areas.html" class="is-active">対応エリア</a></li>
+              <li><a href="column.html">コラム</a></li>
+              <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+          </nav>
+          <a
+            class="header-cta-btn btn btn--secondary"
+            href="https://line.me/R/ti/p/"
+            target="_blank"
+            rel="noopener"
+            >無料診断</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="flow-hero" data-animate="fade-up">
+        <div class="container flow-hero__inner">
+          <p class="flow-hero__eyebrow">SERVICE AREA</p>
+          <h1 class="flow-hero__title">対応エリア一覧</h1>
+          <p class="flow-hero__lead">
+            クリーンプラスは関東・関西を中心に幅広い地域へ無料診断スタッフがお伺いします。エリア検索でお住まいの地域が対象かすぐにお確かめください。
+          </p>
+        </div>
+        <div class="flow-hero__wave flow-hero__wave--bottom" aria-hidden="true"></div>
+      </section>
+
+      <section class="areas-section" id="areas">
+        <div class="areas-hero" data-animate="fade-up">
+          <div class="container areas-hero__inner">
+            <p class="areas-hero__eyebrow">AREA SEARCH</p>
+            <h2 class="areas-hero__title">地域を入力して検索</h2>
+            <p class="areas-hero__lead">
+              都道府県や市区町村名をご入力いただくと、対応中のエリアが一覧から絞り込まれます。対応エリア外でも調整できる場合がありますので、お気軽にご相談ください。
+            </p>
+            <form class="area-search" role="search">
+              <label class="sr-only" for="area-search-input">対応エリアを検索</label>
+              <div class="area-search__field">
+                <input
+                  id="area-search-input"
+                  type="search"
+                  placeholder="例：横浜市・柏・奈良"
+                  autocomplete="off"
+                />
+                <button type="button" class="area-search__clear" aria-label="検索キーワードをクリア">
+                  クリア
+                </button>
+              </div>
+              <p class="area-search__hint">都道府県名・市区町村名で検索できます。</p>
+              <p class="area-search__status" aria-live="polite">11件の都府県が表示されています。</p>
+              <p class="area-search__empty" hidden>該当する地域が見つかりませんでした。</p>
+            </form>
+          </div>
+        </div>
+        <div class="areas-table" data-animate="fade-up">
+          <div class="container">
+            <div class="areas-table__wrapper">
+              <table class="areas-table__table">
+                <tbody>
+                  <tr
+                    data-area-row
+                    data-search="茨城県 土浦市 古河市 龍ケ崎市 常総市 取手市 牛久市 つくば市 守谷市 坂東市 つくばみらい市 稲敷郡阿見町 結城郡 猿島郡 北相馬郡"
+                  >
+                    <th scope="row">茨城県</th>
+                    <td>
+                      土浦市、古河市、龍ケ崎市、常総市、取手市、牛久市、つくば市、守谷市、坂東市、つくばみらい市、稲敷郡阿見町、結城郡、猿島郡、北相馬郡
+                    </td>
+                  </tr>
+                  <tr
+                    data-area-row
+                    data-search="埼玉県 さいたま市 川越市 熊谷市 川口市 行田市 飯能市 加須市 東松山市 春日部市 狭山市 羽生市 鴻巣市 深谷市 上尾市 草加市 越谷市 蕨市 戸田市 朝霞市 志木市 和光市 新座市 桶川市 久喜市 北本市 八潮市 富士見市 三郷市 蓮田市 坂戸市 幸手市 鶴ヶ島市 日高市 吉川市 ふじみ野市 白岡市 北足立郡 入間郡三芳町 入間郡毛呂山町 入間郡越生町 比企郡 秩父市 南埼玉郡 北葛飾郡"
+                  >
+                    <th scope="row">埼玉県</th>
+                    <td>
+                      さいたま市、川越市、熊谷市、川口市、行田市、飯能市、加須市、東松山市、春日部市、狭山市、羽生市、鴻巣市、深谷市、上尾市、草加市、越谷市、蕨市、戸田市、朝霞市、志木市、和光市、新座市、桶川市、久喜市、北本市、八潮市、富士見市、三郷市、蓮田市、坂戸市、幸手市、鶴ヶ島市、日高市、吉川市、ふじみ野市、白岡市、北足立郡、入間郡三芳町、入間郡毛呂山町、入間郡越生町、比企郡、秩父市、南埼玉郡、北葛飾郡
+                    </td>
+                  </tr>
+                  <tr
+                    data-area-row
+                    data-search="千葉県 千葉市 市川市 船橋市 木更津市 松戸市 野田市 佐倉市 習志野市 柏市 市原市 流山市 八千代市 我孫子市 鎌ヶ谷市 浦安市 四街道市 袖ケ浦市 八街市 印西市 白井市 印旛郡"
+                  >
+                    <th scope="row">千葉県</th>
+                    <td>
+                      千葉市、市川市、船橋市、木更津市、松戸市、野田市、佐倉市、習志野市、柏市、市原市、流山市、八千代市、我孫子市、鎌ヶ谷市、浦安市、四街道市、袖ケ浦市、八街市、印西市、白井市、印旛郡
+                    </td>
+                  </tr>
+                  <tr data-area-row data-search="東京都 離島以外">
+                    <th scope="row">東京都</th>
+                    <td>離島以外</td>
+                  </tr>
+                  <tr
+                    data-area-row
+                    data-search="神奈川県 横浜市 川崎市 相模原市 横須賀市 平塚市 鎌倉市 藤沢市 茅ヶ崎市 逗子市 秦野市 厚木市 大和市 伊勢原市 海老名市 座間市 綾瀬市 三浦市 南足柄市 高座郡 中郡大磯町 愛甲郡"
+                  >
+                    <th scope="row">神奈川県</th>
+                    <td>
+                      横浜市、川崎市、相模原市、横須賀市、平塚市、鎌倉市、藤沢市、茅ヶ崎市、逗子市、秦野市、厚木市、大和市、伊勢原市、海老名市、座間市、綾瀬市、三浦市、南足柄市、高座郡、中郡大磯町、愛甲郡
+                    </td>
+                  </tr>
+                  <tr
+                    data-area-row
+                    data-search="京都府 京都市 宇治市 亀岡市 城陽市 向日市 長岡京市 八幡市 京田辺市 木津川市 乙訓郡大山崎町 久世郡久御山町 綴喜郡 相楽郡"
+                  >
+                    <th scope="row">京都府</th>
+                    <td>
+                      京都市、宇治市、亀岡市、城陽市、向日市、長岡京市、八幡市、京田辺市、木津川市、乙訓郡大山崎町、久世郡久御山町、綴喜郡、相楽郡
+                    </td>
+                  </tr>
+                  <tr data-area-row data-search="大阪府 離島以外">
+                    <th scope="row">大阪府</th>
+                    <td>離島以外</td>
+                  </tr>
+                  <tr data-area-row data-search="滋賀県 大津市 近江八幡市 草津市 守山市 栗東市 野洲市 湖南市 蒲生郡竜王町">
+                    <th scope="row">滋賀県</th>
+                    <td>大津市、近江八幡市、草津市、守山市、栗東市、野洲市、湖南市、蒲生郡竜王町</td>
+                  </tr>
+                  <tr
+                    data-area-row
+                    data-search="兵庫県 神戸市 姫路市 尼崎市 明石市 西宮市 洲本市 芦屋市 伊丹市 加古川市 宝塚市 三木市 高砂市 川西市 小野市 三田市 南あわじ市 淡路市 加東市 加古郡"
+                  >
+                    <th scope="row">兵庫県</th>
+                    <td>
+                      神戸市、姫路市、尼崎市、明石市、西宮市、洲本市、芦屋市、伊丹市、加古川市、宝塚市、三木市、高砂市、川西市、小野市、三田市、南あわじ市、淡路市、加東市、加古郡
+                    </td>
+                  </tr>
+                  <tr
+                    data-area-row
+                    data-search="奈良県 奈良市 大和高田市 大和郡山市 天理市 橿原市 桜井市 御所市 生駒市 香芝市 葛城市 宇陀市 生駒郡 磯城郡 北葛城郡"
+                  >
+                    <th scope="row">奈良県</th>
+                    <td>
+                      奈良市、大和高田市、大和郡山市、天理市、橿原市、桜井市、御所市、生駒市、香芝市、葛城市、宇陀市、生駒郡、磯城郡、北葛城郡
+                    </td>
+                  </tr>
+                  <tr data-area-row data-search="和歌山県 和歌山市">
+                    <th scope="row">和歌山県</th>
+                    <td>和歌山市</td>
+                  </tr>
+                  <tr data-area-row data-search="徳島県 徳島市">
+                    <th scope="row">徳島県</th>
+                    <td>徳島市</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="areas-table__note">
+              ※記載以外の地域でも対応できる場合があります。まずはお気軽にご相談ください。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a class="footer__logo" href="index.html#hero" aria-label="トップへ戻る">
+            <img src="public/logo_robot.png" alt="クリーンプラス" />
+          </a>
+          <ul class="footer__contacts">
+            <li><a href="tel:0000000000">電話予約：XXX-XXXX-XXXX</a></li>
+            <li><a href="mailto:info@example.com">info@example.com</a></li>
+            <li>東京都渋谷区○○1-2-3 クリーンプラスビル4F</li>
+          </ul>
+        </div>
+        <div class="footer__nav">
+          <h3>メニュー</h3>
+          <ul>
+            <li>
+              <a class="footer__btn" href="https://line.me/R/ti/p/" target="_blank" rel="noopener"
+                >無料診断（LINE予約はこちら）</a
+              >
+            </li>
+            <li><a href="pricing.html">料金</a></li>
+            <li><a href="flow.html">ご利用の流れ</a></li>
+            <li><a href="areas.html">対応エリア</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer__info">
+          <h3>営業時間</h3>
+          <p>年中無休 9:00〜20:00</p>
+          <p>LINEは24時間受付</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <small>© 2025 CleanPlus Inc. All rights reserved.</small>
+        <ul>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">特定商取引法に基づく表記</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
+
