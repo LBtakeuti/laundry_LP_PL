@@ -140,11 +140,34 @@ document.addEventListener("DOMContentLoaded", () => {
   if (areaSearchInput && areaRows.length > 0) {
     const totalCount = areaRows.length;
 
+    const escapeRegExp = (value) =>
+      value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+    const highlightContent = (element, keyword) => {
+      if (!element) return;
+      if (!element.dataset.originalHtml) {
+        element.dataset.originalHtml = element.innerHTML;
+      }
+
+      if (!keyword) {
+        element.innerHTML = element.dataset.originalHtml;
+        return;
+      }
+
+      const pattern = new RegExp(`(${escapeRegExp(keyword)})`, "gi");
+      element.innerHTML = element.dataset.originalHtml.replace(
+        pattern,
+        "<mark class=\"area-highlight\">$1</mark>",
+      );
+    };
+
     const updateStatus = (matches, keyword) => {
       if (!areaStatus) return;
       areaStatus.textContent =
         keyword && keyword.length > 0
-          ? `${matches}件の都府県が見つかりました。`
+          ? matches > 0
+            ? `${matches}件の都府県で該当エリアが見つかりました。`
+            : "該当する都府県は見つかりませんでした。"
           : `${totalCount}件の都府県が表示されています。`;
     };
 
@@ -156,8 +179,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const haystack = (row.dataset.search || "").toLowerCase();
         const isMatch = keyword === "" || haystack.includes(keyword);
         row.hidden = !isMatch;
+        row.classList.toggle("has-match", isMatch && keyword !== "");
+
+        const th = row.querySelector("th");
+        const td = row.querySelector("td");
+
         if (isMatch) {
           matchCount += 1;
+          highlightContent(th, keyword);
+          highlightContent(td, keyword);
+        } else {
+          highlightContent(th, "");
+          highlightContent(td, "");
         }
       });
 
