@@ -1,4 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  const scrollToTop = () => window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+
+  const navigationEntries = performance.getEntriesByType
+    ? performance.getEntriesByType("navigation")
+    : [];
+  const legacyNavigationType =
+    typeof performance.navigation !== "undefined" ? performance.navigation.type : undefined;
+  const isReload =
+    (navigationEntries.length > 0 && navigationEntries[0].type === "reload") ||
+    legacyNavigationType === 1;
+
+  if (isReload && window.location.hash) {
+    const { pathname, search } = window.location;
+    history.replaceState(null, "", `${pathname}${search}`);
+  }
+
+  scrollToTop();
+
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      scrollToTop();
+    }
+  });
+
   const nav = document.querySelector(".site-nav");
   const navToggle = document.querySelector(".site-nav__toggle");
   const navLinks = document.querySelectorAll(".site-nav__list a");
