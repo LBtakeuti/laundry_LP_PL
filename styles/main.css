@@ -1847,7 +1847,7 @@ details p {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1.1rem;
+  padding: 0.35rem 1.1rem;
   border-radius: 999px;
   background:
     linear-gradient(135deg, rgba(14, 110, 240, 0.95) 0%, rgba(71, 181, 255, 0.95) 100%);
@@ -1879,6 +1879,8 @@ details p {
   width: 6rem;
   height: 6rem;
   border-radius: 999px;
+  margin-top: -0.55rem;
+  margin-bottom: -0.55rem;
 }
 
 .floating-line-button__icon img {
@@ -1894,7 +1896,7 @@ details p {
 
 @media (max-width: 599px) {
   .floating-line-button {
-    padding: 0.42rem 0.85rem;
+    padding: 0.32rem 0.85rem;
     gap: 0.35rem;
     font-size: 0.88rem;
     right: clamp(0.75rem, 4vw, 1rem);
@@ -1903,6 +1905,8 @@ details p {
   .floating-line-button__icon {
     width: 5.1rem;
     height: 5.1rem;
+    margin-top: -0.45rem;
+    margin-bottom: -0.45rem;
   }
 }
 
@@ -2566,6 +2570,9 @@ details p {
     padding: 0;
     background: transparent;
     grid-auto-flow: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
     gap: clamp(1rem, 1.6vw, 1.5rem);
     font-size: clamp(0.88rem, 1vw, 0.95rem);
   }
